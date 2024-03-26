@@ -1,0 +1,45 @@
+﻿@addTagHelper *, BootstrapIcons.AspNetCore
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Presupuesto</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link href="~/css/flowbite.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/datatable/datatables.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <partial name="_Navbar" />
+    <partial name="_Sidebar" />
+
+    <div class="flex flex-col min-h-screen">
+        <div class="flex-grow">
+            <div class="sm:ml-64">
+                <div class="p-4 border-gray-200 mt-14">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <div class="mt-auto sm:ml-64">
+            <partial name="_Footer" />
+        </div>
+    </div>
+
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/flowbite.min.js"></script>
+    <script src="~/js/navbar.js"></script>
+    <script src="~/js/datatable/datatables.min.js"></script>
+    <script src="~/js/datatable.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

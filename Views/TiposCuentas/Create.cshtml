@@ -1,0 +1,27 @@
+﻿@model Presupuesto.Models.TipoCuenta
+@{
+    ViewData["Title"] = "Crear Tipo de Cuenta";
+}
+<div class="mx-auto container max-w-2xl md:w-3/4 shadow-md">
+    <form asp-action="Create" method="post">
+        <div class="md:inline-flex  space-y-4 md:space-y-0  w-full p-4 text-gray-500 items-center">
+            <div class="md:w-2/3 mx-auto max-w-sm space-y-5">
+                <div>
+                    <label asp-for="Nombre" class="text-sm text-gray-400"></label>
+                    <div class="w-full inline-flex border">
+                        <div class="w-1/12 pt-2 bg-gray-100">
+
+                        </div>
+                        <input asp-for="Nombre" class="w-11/12 focus:outline-none focus:text-gray-600 p-2" />
+                    </div>
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="w-full p-4 text-right text-gray-500">
+            <button class="inline-flex items-center focus:outline-none mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Crear
+            </button>
+        </div>
+    </form>
+</div>
